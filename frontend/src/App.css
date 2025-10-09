@@ -1,0 +1,75 @@
+/* Global app styles for glassmorphism and motion (no universal transitions) */
+
+:root {
+  --brand-bg: 224 71% 4%; /* deep ocean */
+  --brand-accent: 168 84% 45%; /* teal/emerald */
+  --brand-accent-2: 28 92% 54%; /* peach/orange */
+}
+
+html, body, #root { height: 100%; }
+
+.app-bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.6) saturate(1.05); /* slightly darker to improve legibility */
+}
+
+/* Global overlay for legibility over video */
+.background-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.36); /* 36% dark overlay */
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(1200px 800px at 10% 10%, hsl(var(--brand-accent)/0.12), transparent 60%),
+              radial-gradient(1200px 800px at 90% 20%, hsl(var(--brand-accent-2)/0.10), transparent 60%);
+  z-index: -1;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.glow-hover {
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition-property: box-shadow, background-color, color, opacity, transform;
+  transition-duration: 220ms;
+}
+.glow-hover:hover { box-shadow: 0 0 30px hsl(var(--brand-accent)/0.25); }
+
+.nav-float {
+  position: sticky;
+  top: 12px;
+  margin-top: 12px;
+  z-index: 50;
+}
+
+.section {
+  min-height: 98vh;
+  scroll-margin-top: 100px; /* for anchor navigation under floating navbar */
+}
+
+.soft-shadow { box-shadow: 0 12px 40px rgba(0,0,0,0.25); }
+
+/* Motion utilities */
+.fade-in-up { animation: fadeInUp 600ms ease; }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Headings text shadow for legibility */
+.hero-title, .hero-text { text-shadow: 0 2px 6px rgba(0,0,0,0.7); }
