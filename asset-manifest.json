@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Breed_sense/static/css/main.a06290d0.css",
+    "main.css": "/Breed_sense/static/css/main.ba44ec7f.css",
     "main.js": "/Breed_sense/static/js/main.3f1c20e2.js",
     "index.html": "/Breed_sense/index.html",
-    "main.a06290d0.css.map": "/Breed_sense/static/css/main.a06290d0.css.map",
+    "main.ba44ec7f.css.map": "/Breed_sense/static/css/main.ba44ec7f.css.map",
     "main.3f1c20e2.js.map": "/Breed_sense/static/js/main.3f1c20e2.js.map"
   },
   "entrypoints": [
-    "static/css/main.a06290d0.css",
+    "static/css/main.ba44ec7f.css",
     "static/js/main.3f1c20e2.js"
   ]
 }
