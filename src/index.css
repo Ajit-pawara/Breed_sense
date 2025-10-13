@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand font and base resets */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', ui-sans-serif, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code { font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+@layer base {
+  :root {
+        --background: 0 0% 6%; /* darker canvas for glass */
+        --foreground: 0 0% 98%;
+        --card: 0 0% 8%;
+        --card-foreground: 0 0% 98%;
+        --popover: 0 0% 8%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 168 84% 45%; /* teal primary */
+        --primary-foreground: 0 0% 98%;
+        --secondary: 0 0% 14.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 0 0% 18%;
+        --muted-foreground: 0 0% 63.9%;
+        --accent: 28 92% 54%; /* peach accent */
+        --accent-foreground: 0 0% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 20%;
+        --input: 0 0% 20%;
+        --ring: 168 84% 45%;
+        --radius: 1rem;
+    }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
